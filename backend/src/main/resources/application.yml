@@ -5,7 +5,7 @@ server:
     max-http-form-post-size: 1GB
 spring:
   application:
-    name: spring-next-js-upload-2025-01-31
+    name: kopring-2025-02-17
   profiles:
     active: dev
     include: secret
@@ -68,11 +68,11 @@ logging:
     org.springframework.transaction.interceptor: TRACE
 custom:
   notProdMembers:
+    - username: KAKAO__3929636702
+      nickname: 혜윤
+      profileImgUrl: http://k.kakaocdn.net/dn/comfpB/btsLRkekHkB/5HFjsz98VWhevLY75MIGJK/img_640x640.jpg
     - username: KAKAO__3889999627
-      nickname: 김혜윤
-      profileImgUrl: http://img1.kakaocdn.net/thumb/R640x640.q70/?fname=http://t1.kakaocdn.net/account_images/default_profile.jpeg
-    - username: KAKAO__3889999628
-      nickname: 장희순
+      nickname: 장희성
       profileImgUrl: http://img1.kakaocdn.net/thumb/R640x640.q70/?fname=http://t1.kakaocdn.net/account_images/default_profile.jpeg
   dev:
     cookieDomain: localhost
