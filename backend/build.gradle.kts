@@ -79,6 +79,18 @@ dependencies {
     testImplementation("org.springframework.security:spring-security-test")
 }
 
+kotlin{
+    compilerOptions{
+        freeCompilerArgs.addAll("-Xjsr305=strict")
+    }
+}
+
+allOpen{
+    annotation("jakarta.persistence.Entity")
+    annotation("jakarta.persistence.MappedSuperclass")
+    annotation("jakarta.persistence.Embeddable")
+}
+
 tasks.withType<Test> {
     useJUnitPlatform()
 }
