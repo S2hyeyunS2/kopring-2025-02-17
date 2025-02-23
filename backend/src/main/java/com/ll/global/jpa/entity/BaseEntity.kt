@@ -1,4 +1,4 @@
-package com.ll.global.jpa.entity;
+package com.ll.global.jpa.entity
 
 import com.ll.standard.util.Ut
 import jakarta.persistence.GeneratedValue
