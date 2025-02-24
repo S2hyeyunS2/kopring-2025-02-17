@@ -77,8 +77,6 @@ class ApiV1PostCommentController(
         )
     }
 
-
-    @JvmRecord
     data class PostCommentModifyReqBody(
         @field:NotBlank @field:Size(min = 2, max = 100) val content: String
     )
