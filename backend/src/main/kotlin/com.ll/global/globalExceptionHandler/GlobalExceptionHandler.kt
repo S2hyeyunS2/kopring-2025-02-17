@@ -8,7 +8,6 @@ import com.ll.standard.base.Empty
 import org.springframework.http.HttpStatus
 import org.springframework.http.ResponseEntity
 import org.springframework.validation.FieldError
-import org.springframework.validation.ObjectError
 import org.springframework.web.bind.MethodArgumentNotValidException
 import org.springframework.web.bind.annotation.ControllerAdvice
 import org.springframework.web.bind.annotation.ExceptionHandler
@@ -71,10 +70,10 @@ class GlobalExceptionHandler {
         val message = ex.bindingResult
             .allErrors
             .stream()
-            .filter { error: ObjectError? -> error is FieldError }
-            .map { error: ObjectError -> error as FieldError }
-            .map { error: FieldError -> error.field + "-" + error.code + "-" + error.defaultMessage }
-            .sorted(Comparator.comparing { obj: String -> obj })
+            .filter { it is FieldError }
+            .map { it as FieldError }
+            .map { it.field + "-" + it.code + "-" + it.defaultMessage }
+            .sorted(Comparator.comparing { it })
             .collect(Collectors.joining("\n"))
 
         return ResponseEntity
