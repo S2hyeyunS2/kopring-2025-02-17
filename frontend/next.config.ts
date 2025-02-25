@@ -14,11 +14,11 @@ const nextConfig: NextConfig = {
       },
       {
         protocol: "https",
-        hostname: "k.kakaocdn.net",  // ✅ 카카오 프로필 이미지 도메인 추가
+        hostname: "k.kakaocdn.net", // ✅ 카카오 프로필 이미지 도메인 추가
       },
       {
         protocol: "http",
-        hostname: "k.kakaocdn.net",  // ✅ http도 추가 (혹시 모를 사용을 위해)
+        hostname: "k.kakaocdn.net", // ✅ http도 추가 (혹시 모를 사용을 위해)
       },
       {
         protocol: "https",
